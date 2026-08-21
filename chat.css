@@ -1,0 +1,87 @@
+/* =========================================================
+   MotoGoRent — chat.css (bubble chat customer <-> admin)
+   ========================================================= */
+.chat-box{
+  background: var(--asphalt-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  height: 60vh;
+  min-height: 420px;
+}
+
+.chat-box__messages{
+  flex:1;
+  overflow-y:auto;
+  padding: 24px;
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+}
+.chat-box__loading,
+.chat-box__empty{
+  margin:auto;
+  color: var(--chrome);
+  font-size: .9rem;
+  text-align:center;
+}
+
+.chat-msg{
+  max-width: 72%;
+  padding: 10px 14px;
+  border-radius: var(--radius-m);
+  font-size: .92rem;
+  line-height:1.4;
+}
+.chat-msg__sender{
+  font-family: var(--font-mono);
+  font-size: .64rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  opacity:.7;
+  margin-bottom: 3px;
+}
+.chat-msg__time{
+  font-size: .66rem;
+  opacity:.55;
+  margin-top: 4px;
+  text-align:right;
+}
+
+.chat-msg--other{
+  align-self:flex-start;
+  background: var(--asphalt);
+  border: 1px solid var(--line);
+  border-bottom-left-radius: 4px;
+}
+.chat-msg--me{
+  align-self:flex-end;
+  background: linear-gradient(135deg, var(--amber), var(--ember));
+  color: #1a1108;
+  border-bottom-right-radius: 4px;
+}
+.chat-msg--me .chat-msg__sender{ color: #1a1108; }
+
+.chat-box__form{
+  display:flex;
+  gap: 12px;
+  padding: 16px;
+  border-top: 1px solid var(--line);
+  background: var(--asphalt);
+}
+.chat-box__form input{
+  flex:1;
+  background: var(--asphalt-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 12px 18px;
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: .95rem;
+}
+.chat-box__form input:focus{
+  outline: none;
+  border-color: var(--amber-soft);
+}

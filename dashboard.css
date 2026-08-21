@@ -1,0 +1,111 @@
+/* =========================================================
+   MotoGoRent — dashboard.css (beranda customer + shell admin)
+   ========================================================= */
+.page{ padding: 44px 0 80px; }
+.page__head{ max-width: 640px; margin-bottom: 36px; }
+.page__head--tight{ margin-bottom: 22px; }
+.page__head h1,
+.page__head h2{ font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.page__head p{ color: var(--chrome); margin:0; }
+
+.page--chat{ max-width: 820px; margin-inline:auto; }
+
+/* =========================================================
+   Fleet grid (dipakai di beranda customer)
+   ========================================================= */
+.fleet-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+}
+.moto-card{
+  background: var(--asphalt-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 22px;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.moto-card:hover{ transform: translateY(-4px); border-color: var(--amber-soft); }
+.moto-card.is-empty{ opacity:.7; }
+.moto-card.is-empty:hover{ transform:none; border-color: var(--line); }
+
+.moto-card__top{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+.moto-card__icon{
+  width:52px; height:52px;
+  border-radius: 12px;
+  display:grid; place-items:center;
+  font-size: 1.5rem;
+  background: var(--asphalt);
+}
+.moto-card__tag{
+  font-family: var(--font-mono);
+  font-size: .64rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color: var(--moss);
+  border: 1px solid var(--moss);
+  border-radius: 999px;
+  padding: 4px 10px;
+  white-space:nowrap;
+}
+.moto-card h3{ font-size: 1.12rem; margin: 4px 0 0; }
+.moto-card p{ color: var(--chrome); font-size: .87rem; margin:0; flex:1; }
+
+.moto-card__stock{
+  font-size: .82rem;
+  font-weight:600;
+  color: var(--moss);
+  border-top: 1px dashed var(--line);
+  padding-top: 10px;
+}
+.moto-card__stock.is-low{ color: var(--amber-soft); }
+.moto-card__stock.is-empty{ color: var(--ember); }
+
+.moto-card__price{
+  font-family: var(--font-mono);
+  font-weight:700;
+  color: var(--amber-soft);
+  font-size: 1.05rem;
+}
+.moto-card__price small{ color: var(--chrome); font-weight:400; font-size:.72rem; }
+
+/* =========================================================
+   Floating chat button
+   ========================================================= */
+.wa-float{
+  position:fixed;
+  right: 22px; bottom: 22px;
+  width: 56px; height:56px;
+  border-radius:50%;
+  background: linear-gradient(135deg, var(--amber), var(--ember));
+  color:#1a1108;
+  display:grid;
+  place-items:center;
+  font-size: 1.4rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,.4);
+  z-index: 60;
+  transition: transform .18s ease;
+}
+.wa-float:hover{ transform: scale(1.07); }
+.wa-float__badge{
+  position:absolute;
+  top:-4px; right:-4px;
+  background: var(--ember);
+  color:#fff;
+  min-width:20px; height:20px;
+  border-radius:999px;
+  display:grid; place-items:center;
+  font-size:.68rem;
+  font-weight:700;
+  border: 2px solid var(--asphalt);
+}
+
+.empty-note{ color: var(--chrome); font-size: .92rem; }
+
+@media (max-width: 720px){
+  .nav__inner{ height:auto; padding-block: 14px; }
+  .nav__links{ width:100%; justify-content:space-between; }
+}
