@@ -1,4 +1,5 @@
-# MotoGoRent — Sistem Login Customer & Sewa Motor
+# MotoGoRent
+By Ahmad Riko Dyansyah
 
 Sistem PHP native (tanpa framework) + MySQL untuk registrasi/login customer,
 katalog motor dengan sisa unit real-time, dan live chat customer ↔ admin.
