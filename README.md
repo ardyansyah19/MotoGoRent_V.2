@@ -32,13 +32,6 @@ motogorent-app/
 4. Jalankan Apache & MySQL dari XAMPP Control Panel.
 5. Akses di browser: `http://localhost/motogorent-app/`
 
-## Akun Default
-
-**Admin** (untuk membalas chat & kelola stok)
-- URL: `http://localhost/motogorent-app/admin/login.php`
-- Email: `admin@motogorent.com`
-- Password: `admin123`
-
 **Customer**
 - Daftar akun baru sendiri lewat `http://localhost/motogorent-app/auth/register.php`
 
